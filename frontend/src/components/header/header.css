@@ -1,0 +1,30 @@
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+  }
+
+  .artist__header {
+    --_shade: hsl(0deg 0% 0% / 25%);
+  
+    display: flex;
+    align-items: end;
+    padding: 25px;
+    height: 40svh;
+    background-size: cover;
+    background-position-y: 20%;
+    background-image: linear-gradient(to bottom, var(--_shade), var(--_shade)),
+      url(https://i.scdn.co/image/ab67618600001016909a162796dbc3629a1fadeb);
+  }
+
+  @media (max-width: 480px) {
+      .artist__header {
+      padding: 16px;
+    }
+  
+ 
+  }
+  

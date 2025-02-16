@@ -15,7 +15,7 @@ const {name,banner}=artistArray.filter((currenteArtistObj)=>currenteArtistObj.id
 // filtrando por musica 
 const songArrayList=songsArray.filter((currenteSongtObj)=>currenteSongtObj.artist===name)
 
-const randomIndex=Math.floor(Math.random())*(songArrayList.length-1);
+const randomIndex=Math.floor(Math.random()*(songArrayList.length-1));
 const  randomIndexFormat=songArrayList[randomIndex].id
 
 

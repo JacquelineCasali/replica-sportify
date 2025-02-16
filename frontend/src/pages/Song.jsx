@@ -9,7 +9,14 @@ function Song() {
   //filtrando por id
   const {image ,name, duration,artist}=songsArray.filter((currenteSongObj)=>currenteSongObj.id===Number(id))[0];
   const artists=artistArray.filter((currenteArtistObj)=>currenteArtistObj.name===artist)[0];
-console.log(artists)
+// filtrando por musica 
+const songArrayList=songsArray.filter((currenteSongtObj)=>currenteSongtObj.artist===artist)
+const randomIndex=Math.floor(Math.random()*(songArrayList.length-1));
+
+const  randomIdFormatArt=songArrayList[randomIndex].id
+const randomIndex2=Math.floor(Math.random()*(songArrayList.length-1));
+const  randomId2FormatArt=songArrayList[randomIndex2].id
+
   return (
     <div className="song">
 <div className="song__container">
@@ -28,7 +35,10 @@ width={75}
 height={75}   
    src={artists.image} alt={`Imagem do artista ${artist}`} />
 </Link>
-<Player duration={duration}/>
+<Player duration={duration}
+randomIdFormatArt={randomIdFormatArt}
+randomId2FormatArt={randomId2FormatArt}
+/>
 <div >
   <p className="song__name">{name}</p>
   <p>{artist}</p>

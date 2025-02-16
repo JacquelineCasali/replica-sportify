@@ -3,17 +3,17 @@ import "./Player.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBackwardStep, faCirclePlay, faForwardStep } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
-export default function Player({duration}) {
+export default function Player({duration,randomIdFormatArt,randomId2FormatArt}) {
   return (
     <div className='player'>
    <div className='player__controllers'>
-<Link to="/song/2">
+<Link to={`/song/${randomIdFormatArt}`}>
 <FontAwesomeIcon className=" player__icon" icon={faBackwardStep} />
 
 </Link>
 <FontAwesomeIcon className=" player__icon player__icon--play" icon={faCirclePlay} />
 
-<Link to="/song/3">
+<Link to={`/song/${randomId2FormatArt}`}>
 <FontAwesomeIcon className=" player__icon" icon={faForwardStep} />
 
 </Link>

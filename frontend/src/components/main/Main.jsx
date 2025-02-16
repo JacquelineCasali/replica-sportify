@@ -1,6 +1,6 @@
 
 
-import "./main.css"
+import "./Main.css"
 
 import { Head } from "../../components/Head/Head"
 import ItemList from "../itemList/ItemList"

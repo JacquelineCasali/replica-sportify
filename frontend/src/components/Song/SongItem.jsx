@@ -1,25 +1,25 @@
 import React from 'react'
 import "./Song.css"
 import { Link } from 'react-router-dom'
-import { songsArray } from '../../database/songs'
-export default function SongItem({name}) {
-// const { image ,name, duration, artist,    audio}=data
+
+export default function SongItem({image ,name, duration, index,id}) {
+
    
   return (
-    <Link to="/song/1" className='song-item'>
+    <Link to={`/song/${id}`} className='song-item'>
    <div className='song-item__number-album'>
    
-     <p>1</p>
+     <p>{index+1}</p>
     
     <div className='song-item__album'>
      <img 
      className='song-item__image'
-     src={"https://i.scdn.co/image/ab67616d00001e02656f8291d741ad247ef330fe"} alt={`Imagem do artista ${name}`} />
+     src={image} alt={`Imagem da Música ${name}`} />
    
-   <p className='song-item__name'>Ultima Saudade</p>
+   <p className='song-item__name'>{name}</p>
    </div>
    </div>
-   <p>02:30</p>
+   <p>{duration}</p>
    
     </Link>
   )

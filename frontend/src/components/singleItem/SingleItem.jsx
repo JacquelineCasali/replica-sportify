@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./SingleItem.css"

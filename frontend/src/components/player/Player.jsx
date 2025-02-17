@@ -14,7 +14,9 @@ export default function Player({duration,randomIdFormatArt,randomId2FormatArt}) 
 <FontAwesomeIcon className=" player__icon player__icon--play" icon={faCirclePlay} />
 
 <Link to={`/song/${randomId2FormatArt}`}>
-<FontAwesomeIcon className=" player__icon" icon={faForwardStep} />
+<FontAwesomeIcon className=" player__icon" icon={faForwardStep}
+
+/>
 
 </Link>
 

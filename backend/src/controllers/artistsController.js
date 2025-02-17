@@ -1,4 +1,4 @@
-// import {artistArray} from "../../../frontend/src/database/artists.js"
+
 import { db } from "../connect.js";
 
 const artistsController ={

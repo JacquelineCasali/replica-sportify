@@ -2,11 +2,11 @@ import React from 'react'
 import "./Song.css"
 import { Link } from 'react-router-dom'
 
-export default function SongItem({image ,name, duration, index,id}) {
+export default function SongItem({image ,name, duration, index,_id}) {
 
    
   return (
-    <Link to={`/song/${id}`} className='song-item'>
+    <Link to={`/song/${_id}`} className='song-item'>
    <div className='song-item__number-album'>
    
      <p>{index+1}</p>

@@ -10,13 +10,13 @@ const {id}= useParams();
 
 
 //filtrando por id
-const {name,banner}=artistArray.filter((currenteArtistObj)=>currenteArtistObj.id===Number(id))[0]
+const {name,banner}=artistArray.filter((currenteArtistObj)=>currenteArtistObj._id===(id))[0]
 
 // filtrando por musica 
 const songArrayList=songsArray.filter((currenteSongtObj)=>currenteSongtObj.artist===name)
 
 const randomIndex=Math.floor(Math.random()*(songArrayList.length-1));
-const  randomIndexFormat=songArrayList[randomIndex].id
+const  randomIndexFormat=songArrayList[randomIndex]._id
 
 
   return (

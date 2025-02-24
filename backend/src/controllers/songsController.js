@@ -1,5 +1,5 @@
 
-import { db } from "../connect.js";
+import { db } from "../db/connect.js";
 
  
  

@@ -1,5 +1,6 @@
+import { db } from "../db/connect.js";
 
-import { db } from "../connect.js";
+
 
 const artistsController ={
 

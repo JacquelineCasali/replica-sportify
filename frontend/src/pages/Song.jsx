@@ -7,7 +7,7 @@ import { artistArray } from "../database/artists";
 function Song() {
   const {id}= useParams();
   //filtrando por id
-  const {image ,name, duration,artist,audio}=songsArray.filter((currenteSongObj)=>currenteSongObj._id===(id))[0];
+  const {image ,name, duration,artist,audio}=songsArray.filter((currenteSongObj)=>currenteSongObj._id===Number(id))[0];
   const artists=artistArray.filter((currenteArtistObj)=>currenteArtistObj.name===artist)[0];
 // filtrando por musica 
 const songArrayList=songsArray.filter((currenteSongtObj)=>currenteSongtObj.artist===artist)

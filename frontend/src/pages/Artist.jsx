@@ -1,16 +1,16 @@
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons"
-import { Head } from "../components/Head/Head"
+import { Head } from "../components/Head/Head.jsx"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link, useParams } from "react-router-dom"
-import SongList from "../components/Song/SongList"
-import {artistArray} from "../database/artists"
-import { songsArray } from "../database/songs"
+import SongList from "../components/Song/SongList.jsx"
+import {artistArray} from "../database/artists.js"
+import { songsArray } from "../database/songs.js"
 function Artist() {
 const {id}= useParams();
 
 
 //filtrando por id
-const {name,banner}=artistArray.filter((currenteArtistObj)=>currenteArtistObj._id===(id))[0]
+const {name,banner}=artistArray.filter((currenteArtistObj)=>currenteArtistObj._id===Number(id))[0]
 
 // filtrando por musica 
 const songArrayList=songsArray.filter((currenteSongtObj)=>currenteSongtObj.artist===name)

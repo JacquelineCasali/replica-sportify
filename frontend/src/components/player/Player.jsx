@@ -15,13 +15,22 @@ const formtTime=(timeInSeccond)=>{
 return `${minutes}:${seconds}` 
 
 }
+const timeInSeccond=(timeString)=>{
+const splistArray=timeString.split(":")
+const minutes=Number(splistArray[0])
+const secundos=Number(splistArray[1])
+return secundos+minutes*60
+}
+
+
 
 export default function Player({duration,randomIdFormatArt,randomId2FormatArt,audio}) {
  const audioPlayer=useRef();
+ const progresseBar=useRef()
  const [isPlay,setIsPlayer]=useState(false)
 const [currentTime,setCurrentTime]=useState(formtTime(0))
+const durationInSeconds=timeInSeccond(duration)
 
- 
  const playPause=()=>{
   // esta tocando 
   isPlay? audioPlayer.current.pause():audioPlayer.current.play();
@@ -32,8 +41,11 @@ const [currentTime,setCurrentTime]=useState(formtTime(0))
 useEffect(()=>{
   const intervalId =  setInterval(()=>{
   // atualizar o cronometro em qual momento da musica esta 
+  if(isPlay)
+ setCurrentTime(formtTime(audioPlayer.current.currentTime))
+//barra de progresso 
+progresseBar.current.style.setProperty("--_progress",(audioPlayer.current.currentTime/durationInSeconds)*100+"%")
 
-  setCurrentTime(formtTime(audioPlayer.current.currentTime))
   },1000)
   //limpar
   return()=>clearInterval(intervalId)
@@ -71,7 +83,9 @@ useEffect(()=>{
    <div className='player__progress'>
 <p >{currentTime}</p>
 <div className='player__bar'>
-    <div className='player__bar-progress'></div>
+    <div
+    ref={progresseBar}
+    className='player__bar-progress'></div>
 </div>
 <p>{duration}</p>
    </div>

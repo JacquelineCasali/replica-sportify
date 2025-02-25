@@ -44,5 +44,6 @@ https://github.com/JacquelineCasali/replica-sportify
 1. `$ npm install`
 2. `$ npm run dev`
 
-## Bibliotecas Usadas
+## 📝 Desenvolvido por
+Jacqueline Casali/CasaliTech
 

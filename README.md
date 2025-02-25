@@ -6,6 +6,10 @@ Este projeto é uma réplica do Spotify, desenvolvida para demonstrar habilidade
 ## Imgem e Video
 
 
+https://github.com/user-attachments/assets/ed837b01-38e8-4aa9-ac8a-b9f2dbf43cf9
+
+
+
 ## Site do Projeto
 https://replica-sportify.vercel.app/
 
